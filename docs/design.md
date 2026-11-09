@@ -1,20 +1,20 @@
 # Essential Code
 
-#include <stdio.h>
-#include <unistd.h>
-#include <pigpio.h>
-#define PIN 17
-int main(int argc, char* argv[])
-{
-  gpioInitialise();
-  gpioSetMode(PIN, PI_OUTPUT);
-  gpioWrite(PIN,1);// LED ON
-  getchar();// waits for enter key
-  gpioWrite(PIN,0);// LED off
-  getchar();//waits for enter key
-  gpioTerminate();
-  return 0;
-}
+## #include <stdio.h>
+## #include <unistd.h>
+## #include <pigpio.h>
+## #define PIN 17
+## int main(int argc, char* argv[])
+## {
+##   gpioInitialise();
+##   gpioSetMode(PIN, PI_OUTPUT);
+##   gpioWrite(PIN,1);// LED ON
+##   getchar();// waits for enter key
+##   gpioWrite(PIN,0);// LED off
+##   getchar();//waits for enter key
+##   gpioTerminate();
+##   return 0;
+## }
 
 File handling will also be used in the code to store the values input by the user and then it will compare those values with a conditional.
 If the temps trigger a warning then it will trigger the light to turn on otherwise the light will not turn on.

@@ -154,7 +154,7 @@ int main(void)
     else
     {
         fprintf(statusFile, "Overall Status: NORMAL\n");
-        fprintf(statusFile, "Warning LED: Off\n");
+        fprintf(statusFile, "LED: ON\n");
     }
 
     fclose(statusFile);
@@ -178,7 +178,6 @@ int main(void)
     if (warning)
     {
         printf("\nWarning detected. LED is blinking.\n");
-        printf("Press Ctrl+C to stop the program.\n");
 
         while (1)
         {
